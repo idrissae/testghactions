@@ -18,7 +18,7 @@ jobs:
           run: |
             ls -a
             echo $RANDOM >> random.txt
-            git config --global user.email "$GITHUB_ACTOR@cc.com"
+            git config --global user.email "$GITHUB_ACTOR@gmail.com"
             git remote -v
             git add -A
             git commit -m "gh commit"
