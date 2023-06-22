@@ -12,11 +12,13 @@ jobs:
           run: |
            echo $GITHUB_ACTOR
            echo $GITHUB_TOKEN
+           git remote -v
 
         - name: git push
           run: |
             ls -a
             echo $RANDOM >> random.txt
+            git config --global user.email "$GITHUB_ACTOR@cc.com"
             git remote -v
             git add -A
             git commit -m "gh commit"
