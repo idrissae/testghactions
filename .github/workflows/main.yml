@@ -12,13 +12,13 @@ jobs:
           run: |
            echo $GITHUB_ACTOR
            echo $GITHUB_TOKEN
-        - name 
+        - name: git pull 
           run: |
             git init
             git remote add origin "https://$GITHUB_ACTOR:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY.git"
             git pull origin main
 
-        - name: commit
+        - name: git push
           run: |
             ls -a
             echo $RANDOM >> random.txt
@@ -26,4 +26,3 @@ jobs:
             git add -A
             git commit -m "gh commit"
             git push origin main
-            
