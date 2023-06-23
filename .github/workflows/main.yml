@@ -7,13 +7,12 @@ jobs:
     decrypt-certif-file:
       runs-on: ubuntu-latest
       steps:
-        - uses: actions/checkout@v3
+        - uses: actions/checkout@v2
         - name: echo some env vars
           run: | 
            ls
            git init
            git config --global user.name "$GITHUB_ACTOR"
            git config --global user.email "$GITHUB_ACTOR@gmail.com"
-           git remote add origin "https://$GITHUB_ACTOR:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY.git"
            git remote -v
            git status 
