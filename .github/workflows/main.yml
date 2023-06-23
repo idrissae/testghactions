@@ -8,11 +8,8 @@ jobs:
       runs-on: ubuntu-latest
       steps:
         - uses: actions/checkout@v2
-        - name: echo some env vars
+        - name: push to rep 
           run: | 
            ls
-           git init
-           git config --global user.name "$GITHUB_ACTOR"
-           git config --global user.email "$GITHUB_ACTOR@gmail.com"
            git remote -v
            git status 
