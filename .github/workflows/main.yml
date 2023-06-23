@@ -9,7 +9,11 @@ jobs:
       steps:
         - uses: actions/checkout@v3
         - name: echo some env vars
-          run: |
-           echo $GITHUB_ACTOR
-           echo $GITHUB_TOKEN
+          run: | 
            ls
+           git init
+           git config --global user.name "$GITHUB_ACTOR"
+           git config --global user.email "$GITHUB_ACTOR@gmail.com"
+           git remote add origin "https://$GITHUB_ACTOR:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY.git"
+           git remote -v
+           git status 
