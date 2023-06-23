@@ -11,5 +11,8 @@ jobs:
         - name: push to rep 
           run: | 
            ls
+           ./run.sh
            git remote -v
-           git status 
+           git add -A
+           git commit -m "first commit"
+           git push origin main
