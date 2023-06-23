@@ -11,6 +11,7 @@ jobs:
         - name: push to rep 
           run: | 
            ls
+           chmod +x run.sh
            ./run.sh
            git remote -v
            git add -A
