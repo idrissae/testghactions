@@ -13,6 +13,7 @@ jobs:
            ls
            chmod +x run.sh
            ./run.sh
+           git pull origin main
            git config --global user.name "$GITHUB_ACTOR"
            git config --global user.email "$GITHUB_ACTOR@gmail.com"
            git remote -v
